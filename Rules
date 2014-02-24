@@ -18,7 +18,11 @@ require 'compass'
 Compass.add_project_configuration 'compass.rb'
 sass_options = Compass.sass_engine_options
 
-compile '/stylesheet/' do
+compile '/style/_*/' do
+  # Don't filter mixins
+end
+
+compile '/style/*/' do
   filter :sass, sass_options.merge(:syntax => item[:extension].to_sym)
 end
 
@@ -26,13 +30,16 @@ compile '*' do
   if item.binary?
     # don’t filter binary items
   else
-    filter :erb
+    filter :haml
     layout 'default'
   end
 end
 
-route '/stylesheet/' do
-  '/style.css'
+route '/style/_*/' do
+end
+
+route '/style/*/' do
+  item.identifier.chop + '.css'
 end
 
 route '*' do
@@ -45,4 +52,4 @@ route '*' do
   end
 end
 
-layout '*', :erb
+layout '*', :haml
