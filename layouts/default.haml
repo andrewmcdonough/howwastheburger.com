@@ -1,0 +1,12 @@
+!!!
+%html{:lang => "en"}
+  %title
+    How was the burger?
+  %link{:rel => "stylesheet", :href => "/style/scree.css", :media => "screen"}
+  %body
+    %header
+      %h1= item[:title]
+    #main
+      #content
+        = yield
+
