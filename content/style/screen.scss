@@ -1,31 +1,78 @@
 @import "base";
 @import "compass/reset";
-@import "fonts";
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+@import url(http://fonts.googleapis.com/css?family=Gafata);
+@import url(http://fonts.googleapis.com/css?family=Cambo);
 
-$main-font-family:  'Raleway', Helvetica, Arial, sans-serif;
+$main-font-family:  'Cambo';
+$main-font-color: #666;
 
+$header-font-family: 'Varela Round';
+$header-subtitle-font-family: 'Gafata';
+$heading2-font-family: 'Gafata';
+
+$header-font-size: 50;
+$header-subtitle-font-size: 20;
+$heading2-font-size: 25;
+$body-font-size: 24;
 
 $avocado: #E8FB90;
 $lettuce: #C8D62A;
 $bun: #E4B12F;
 $burger: #6E5655;
 $bacon: #9E2963;
+$dark-gray: #333;
 
 body {
   font-family: $main-font-family;
-  background-color: $avocado;
+  background-color: #fff;
+  font-size: $body-font-size;
+  line-height: ($body-font-size * 2px);
+}
+
+h2 {
+  font-family: $heading2-font-family;
+  font-size: $heading2-font-size * 1px;
+  line-height: $heading2-font-size * 2px;
+  font-weight: bold;
+}
+
+p {
+  line-height: ($body-font-size * 1.5px);
+  color: $main-font-color;
 }
 
 header {
-  height:200px;
+  font-family: $header-font-family;
+  height: 400px;
   width: 100%;
-  font-size: 48px;
-  background-color: $burger;
-  color: $bacon;
+  background-color: $dark-gray;
+  color: #fff;
   border-color: $bacon;
   border-bottom: 5px;
-  text-align:center;
-  padding-top: 80px;
+  h1 {
+    font-family: $header-font-family;
+    font-size: $header-font-size * 1px;
+    line-height: $header-font-size * 1.5px;
+  }
+  .subtitle {
+    font-family: $header-subtitle-font-family;
+    font-size: $header-subtitle-font-size * 1px;
+  }
+  .label {
+    padding-top:150px;
+    text-align:center;
+  }
 }
 
+
+#main {
+  padding-top:10px;
+}
+
+#content {
+  width: 600px;
+  margin: 0 auto;
+}
 

@@ -5,7 +5,9 @@
   %link{:rel => "stylesheet", :href => "/style/screen.css", :media => "screen"}
   %body
     %header
-      %h1= item[:title]
+      .label
+        %h1= item[:title]
+        .subtitle= item[:subtitle]
     #main
       #content
         = yield
