@@ -1,3 +1,31 @@
 @import "base";
+@import "compass/reset";
+@import "fonts";
+
+$main-font-family:  'Raleway', Helvetica, Arial, sans-serif;
+
+
+$avocado: #E8FB90;
+$lettuce: #C8D62A;
+$bun: #E4B12F;
+$burger: #6E5655;
+$bacon: #9E2963;
+
+body {
+  font-family: $main-font-family;
+  background-color: $avocado;
+}
+
+header {
+  height:200px;
+  width: 100%;
+  font-size: 48px;
+  background-color: $burger;
+  color: $bacon;
+  border-color: $bacon;
+  border-bottom: 5px;
+  text-align:center;
+  padding-top: 80px;
+}
 
 
