@@ -3,13 +3,14 @@
   %title
     How was the burger?
   %link{:rel => "stylesheet", :href => "/style/screen.css", :media => "screen"}
+  %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }
   %body
     %header
       .label
         %h1= item[:title]
         .subtitle= item[:subtitle]
     #main
-      #content
+      #content.container
         = yield
         #comments 
           %h2 Comments
@@ -28,7 +29,7 @@
             %span.logo-disqus Disqus
     %footer
       #footer-content
-        How was the burger?
+        A blog by Andrew McDonough
   
 
 
