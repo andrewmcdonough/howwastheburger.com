@@ -65,6 +65,13 @@ p {
   margin-bottom: $body-font-size * 1.5px;
 }
 
+$textured: linear-gradient(
+      rgba(100, 80, 60, 0.45), 
+      rgba(100, 80, 60, 0.45)
+    ),
+    url('/images/patterns/tweed.png');
+
+
 header {
   font-family: $header-font-family;
   height: 400px;
@@ -72,6 +79,7 @@ header {
   background-color: $header-color;
   color: #fff;
   vertical-align:middle;
+  background: $textured;
   h1 {
     font-family: $header-font-family;
     font-size: $header-font-size * 1px;
@@ -104,22 +112,21 @@ footer {
   clear:both;
   float:left;
   width:100%;
-  background-color: $footer-color;
+  height:50px;
+  background: $textured;
+  text-align:center;
   #footer-content {
-    font-family: Arial;
-    font-size:12px;
-    padding-top:10px;
+    font-family: Helvetica;
+    font-size:14px;
+    padding-top:18px;
     padding-bottom:10px;
     color: #fff;
     margin: 0 auto;
     padding-right:20px;
-    float:right;
   }
   position:relative;
   bottom:0px;
 }
-.left { float:left; clear:none;}
-.right { float:right; clear:none;}
 
 a {
   color: $link-color;
