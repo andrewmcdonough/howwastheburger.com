@@ -156,8 +156,8 @@ a:hover {
 }
 
 @media (max-width: 600px) and (min-width: 480px) {
-  header{
-    height:200px;
+  header {
+    height:300px;
     h1 {
       font-size: $header-font-size * 0.7 * 1px;
       line-height: $header-font-size * 0.7 * 1.5px;
@@ -165,6 +165,9 @@ a:hover {
     .subtitle {
       font-size: $header-subtitle-font-size * 0.7 * 1px;
       line-height: $header-font-size * 0.7 * 1.5px;
+    }
+    .label { 
+      top: 100px;
     }
   }
   p {
@@ -177,6 +180,25 @@ a:hover {
   } 
 }
 
+
+figure {
+  img {
+    margin-bottom:2px;
+    width:100%;
+  }
+  figcaption {
+    padding-top:5px;
+    text-align:center;
+    font-size: 12px;
+    font-family: Arial;
+    color:#999;
+    font-style: italic; 
+  }
+  margin-bottom:15px;
+  padding:10px;
+  border:solid 1px #ccc;
+}
+
 @media (max-width: 480px) {
   header{
     height:100px;
@@ -187,6 +209,9 @@ a:hover {
     .subtitle {
       font-size: $header-subtitle-font-size * 0.6 * 1px;
       line-height: $header-font-size * 0.6 * 1.5px;
+    }
+    .label { 
+      top: 15px;
     }
   }
   p {
