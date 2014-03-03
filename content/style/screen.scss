@@ -79,6 +79,7 @@ header {
 }
 
 #content {
+  padding-top:10px;
   margin: 0 auto;
 }
 #comments {
@@ -107,7 +108,11 @@ footer {
 .right { float:right; clear:none;}
 
 a {
-  color:#003300;
+  color: $bacon;
+  text-decoration:none;
+}
+a:hover {
+  text-decoration:underline;
 }
 
 
