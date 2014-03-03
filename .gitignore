@@ -3,3 +3,7 @@
 output/
 *.log
 tmp/
+public/
+.ruby-version
+.ruby-gemset
+.last_published

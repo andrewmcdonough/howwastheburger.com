@@ -3,6 +3,20 @@ GEM
   specs:
     adsf (1.2.0)
       rack (>= 1.0.0)
+    aws-sdk (1.35.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
+      uuidtools (~> 2.1)
+    capistrano (2.15.5)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
+    capistrano-s3 (0.2.7)
+      aws-sdk
+      capistrano
+      mime-types
     celluloid (0.15.2)
       timers (~> 1.1.0)
     celluloid-io (0.15.0)
@@ -31,6 +45,8 @@ GEM
       nanoc (>= 3.6.3)
     haml (4.0.4)
       tilt
+    highline (1.6.21)
+    json (1.8.1)
     listen (2.6.2)
       celluloid (>= 0.15.2)
       celluloid-io (>= 0.15.0)
@@ -38,9 +54,20 @@ GEM
       rb-inotify (>= 0.9)
     lumberjack (1.0.4)
     method_source (0.8.2)
+    mime-types (2.1)
+    mini_portile (0.5.2)
     nanoc (3.6.7)
       cri (~> 2.3)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.8.0)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     nio4r (1.0.0)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -54,12 +81,15 @@ GEM
     thor (0.18.1)
     tilt (1.4.1)
     timers (1.1.0)
+    uuidtools (2.1.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   adsf
+  capistrano (~> 2.15.5)
+  capistrano-s3
   compass
   guard
   guard-nanoc
