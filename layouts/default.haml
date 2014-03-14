@@ -3,7 +3,12 @@
   %title
     How was the burger?
   %link{:rel => "stylesheet", :href => "/style/screen.css", :media => "screen"}
-  %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }
+  %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0" }
+  %meta{:property => "og:title", :content => item[:title]}
+  %meta{:property => "og:sitename", :content => "How was the burger?"}
+  %meta{:property => "og:url", :content => "http://howwastheburger.com/#{item[:path]}"}
+  - if item[:facebook_image]
+    %meta{:property => "og:image", :content => "http://howwastheburger.com/#{item[:facebook_image]}"}
   %body
     #layout
       %header.header
@@ -32,7 +37,10 @@
         #layout_footer
     %footer#footer
       #footer-content
-        A blog by Andrew McDonough
+        A blog by 
+        %a{:href => "http://andrewmcdonough.com"} Andrew McDonough
+        of
+        %a{:href => "http://tribesports.com"} Tribesports
 
   :javascript
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
